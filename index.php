@@ -1,12 +1,29 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <label>username:</label>
+        <input type="text" name="username"><br>
+        <label>password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" name="login" value="Log In">
+    </form>
+</body>
+</html>
 
 <?php
-    
-    $foods = array("apple", "orange", "banana", "coconut");
-
-
-    for($i = 0; $i < count($foods); $i++){
-        echo $foods[$i]."<br>";
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    if(isset($username) && isset($password)){
+        echo("".$username."".$password."");
+    } else if(empty($username)){
+        echo("Username is empty");
+    } else if(empty($password)){
+        echo("password is empty");
     }
-
 ?>
