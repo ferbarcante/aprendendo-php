@@ -1,27 +1,25 @@
-<?php 
-    //declaring a variable
-    $name = "Maria Fernanda";
-    $food = "pizza";
-    $email = "maria@gmail.com";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="get">
+        <label>username</label><br>
+        <input type="text" name="username"><br>
+        <label>password</label><br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Log in">
+    </form>
+   
+</body>
+</html>
 
-    $age = 21;
-    $year = date("Y");
-    $price = 15.20;
+<?php
+    echo $_GET["username"]. "<br>";
+    echo $_GET["password"];
 
-    $employed = true;
 
-    //output
-    echo "Hello {$name}";
-    echo "<br> You like {$food}";
-    echo "<br> Your email is {$email}";
-    echo "<br> Your age is {$age}";
-    echo "<br> The year is {$year}";
-    echo "<br> The price of the pizza is \${$price}";
-    if($employed=true){
-        echo"<br>You are employed!";
-    }
-
-    $total = null;
-    $total = 3 * 2;
-    echo"<br>3 x 2 = {$total}";
 ?>
