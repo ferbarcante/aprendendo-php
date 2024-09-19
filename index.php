@@ -7,19 +7,27 @@
 </head>
 <body>
     <form action="index.php" method="post">
-        <label>username</label><br>
-        <input type="text" name="username"><br>
-        <label>password</label><br>
-        <input type="password" name="password"><br>
-        <input type="submit" value="Log in">
+        <label>x:</label><br>
+        <input type="text" name="x"><br>
+        <input type="submit" name="total"><br>
+        
     </form>
    
 </body>
 </html>
 
 <?php
-    echo $_POST["username"]. "<br>";
-    echo $_POST["password"];
+    $x = $_POST["x"];
+    $total = null;
+
+    //absolute number
+    //$total = abs($x);
+
+    //arredondar numero ex: 3.99 -> 4
+    $total = round($x);
+
+
+    echo $total;
 
 
 ?>
