@@ -2,7 +2,11 @@
 
 <?php
     
-    for($i = 0; $i < 4; $i++){
-        echo"i = {$i} <br>";
+    $foods = array("apple", "orange", "banana", "coconut");
+
+
+    for($i = 0; $i < count($foods); $i++){
+        echo $foods[$i]."<br>";
     }
+
 ?>
