@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="get">
+    <form action="index.php" method="post">
         <label>username</label><br>
         <input type="text" name="username"><br>
         <label>password</label><br>
@@ -18,8 +18,8 @@
 </html>
 
 <?php
-    echo $_GET["username"]. "<br>";
-    echo $_GET["password"];
+    echo $_POST["username"]. "<br>";
+    echo $_POST["password"];
 
 
 ?>
